@@ -36,7 +36,16 @@
 
     <hr />
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <table class="job-listing">
+        <tr>
+            <th>Job</th>
+            <th>Description</th>
+        </tr>
+        <tr th:each="searchResults : ${searchResults.entrySet()}">
+            <td th:text="${searchResults.getKey}"></td>
+            <td th:text="${searchResults.getValue}"></td>
+        </tr>
+    </table>
 
 </div>
 

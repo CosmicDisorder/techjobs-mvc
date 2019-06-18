@@ -7,6 +7,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -54,9 +55,9 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
-
+        ArrayList<HashMap<String, String>> itJobs = (ArrayList<HashMap<String, String>>) allJobs.clone();
         // Bonus mission; normal version returns allJobs
-        return new ArrayList<>(allJobs);
+        return itJobs;
     }
 
     /**
