@@ -14,6 +14,34 @@
                 <a th:href="@{/list/values(column=${column.key})}" th:text="${column.value}"></a>
             </li>
         </ul>
+
+        <table>
+            <tr th:each="row : ${searchResults}">
+                <table class="job-listing">
+                    <tr>
+                        <td>Position Type</td>
+                        <td th:text="${row.get('position type')}">eep</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td th:text="${row.get('name')}">eep</td>
+                    </tr>
+                    <tr>
+                        <td>Employer</td>
+                        <td th:text="${row.get('employer')}">eep</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td th:text="${row.get('location')}">eep</td>
+                    </tr>
+                    <tr>
+                        <td>Core Competency</td>
+                        <td th:text="${row.get('core competency')}">eep</td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+
     </div>
 
 </body>
